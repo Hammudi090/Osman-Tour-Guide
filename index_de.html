@@ -1,0 +1,214 @@
+ <!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Guide - Osman Osman</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-image: url(QatarSkyline.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .language-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .language-button {
+            background-color: #343a40;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .language-button img {
+            margin-right: 5px;
+            width: 20px;
+            height: auto;
+        }
+
+        .profile-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .profile-image {
+            max-width: 100px;
+            height: auto;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: justify;
+        }
+
+        .feedback-form {
+            margin-top: 20px;
+        }
+
+        .feedback-form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .feedback-form textarea,
+        .feedback-form input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .feedback-form input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .feedback-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Star Rating */
+        .star-rating {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 24px;
+            cursor: pointer;
+            color: #ddd;
+            margin-right: 5px;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover ~ label,
+        .star-rating input:checked ~ label {
+            color: #f8d620;
+        }
+
+        .phone-number {
+            color: #fff;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Osman Osman - Ihr Reiseleiter</h1>
+        <p class="phone-number">Telefon: +974 5026 5314</p>
+        <div class="language-buttons">
+            <button class="language-button" onclick="switchToEnglish()"><img
+                    src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English Flag"> Englisch</button>
+            <button class="language-button" onclick="switchToGerman()"><img
+                    src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt="German Flag"> Deutsch</button>
+        </div>
+        <div class="profile-section">
+            <img class="profile-image" src="Osman.jpeg" alt="Osman Osman">
+        </div>
+    </header>
+    <section>
+        <h2>Über mich</h2>
+        <p>
+          Willkommen in meiner Welt der Entdeckung und kulturellen Eintauchens! Ich bin Osman, und meine Lebensreise führte mich durch Ostafrika, Deutschland, Großbritannien und Katar, was mir ein tiefes Verständnis für vielfältige Kulturen vermittelt hat.
+
+        </p>
+        <p>
+          Mein Bildungsweg war ebenso vielfältig und umfasste die Navigation durch das deutsche Schulsystem, ein Praktikum im Bauingenieurwesen und das Streben nach Diplomen im Bauwesen und Umwelt in Großbritannien, gefolgt von Islamischen Studien in Katar. Diese akademische Reise hat nicht nur meine technischen Fähigkeiten geschärft, sondern auch mein Verständnis für kulturelle und religiöse Feinheiten vertieft.
+        </p>
+
+        <p>
+          Als lizenzierter Reiseführer für den Tourismus in Katar arbeite ich ausschließlich für registrierte Reiseveranstalter bei Qatar Tourism. Wenn Sie gespannt sind, die Wunder Katars mit mir als Ihrem Guide zu erkunden, geben Sie einfach meinen vollständigen Namen, meine Tourguide-Nummer und meine Mobilnummer an Ihren bevorzugten Reiseveranstalter weiter, oder nehmen Sie direkt Kontakt mit mir auf, und ich werde Sie mit einem renommierten Reiseveranstalter in Doha verbinden, um eine nahtlose Buchung zu realisieren, die Ihren Vorlieben und Erwartungen entspricht.
+        </p>
+        <p>
+          Lassen Sie uns Ihre Reiseträume in unvergessliche Realitäten verwandeln und Sie in die faszinierende Essenz Katars eintauchen!
+        </p>
+    </section>
+    <section>
+        <h2>Kundenbewertungen</h2>
+        <a href="view_reviews.php">Kundenbewertungen anzeigen</a>
+        <p>Erfahren Sie, was andere über ihre Erfahrungen mit Osman sagen:</p>
+    </section>
+    <section class="feedback-form">
+        <h2>Bewertung schreiben</h2>
+        <form action="feedback.php" method="post">
+            <label for="name">Ihr Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Star Rating -->
+            <label for="rating">Bewertung:</label>
+            <div class="star-rating">
+                <input type="radio" id="star1" name="rating" value=""><label for="star1">★</label>
+                <input type="radio" id="star2" name="rating" value=""><label for="star2">★</label>
+                <input type="radio" id="star3" name="rating" value=""><label for="star3">★</label>
+                <input type="radio" id="star4" name="rating" value=""><label for="star4">★</label>
+                <input type="radio" id="star5" name="rating" value=""><label for="star5">★</label>
+            </div>
+
+            <label for="feedback">Schreiben Sie hier Ihr Feedback:</label>
+            <textarea id="feedback" name="feedback" placeholder="Schreiben Sie hier Ihr Feedback" required></textarea>
+
+            <input type="submit" value="Feedback absenden">
+        </form>
+    </section>
+
+  <script>
+        function switchToEnglish() {
+            window.location.href = "index.html";
+        }
+
+        function switchToGerman() {
+            window.location.href = "index_de.html";
+        }
+    </script>
+</body>
+
+</html>
